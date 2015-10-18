@@ -22,6 +22,16 @@ describe('Join the site.', function() {
     );
   });
 
+  it('Requires at least six characters in the secret', function(done) {
+    request(
+      'http://localhost:1337/join/test/secret', 
+      function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+      }   
+    );
+  })
+
   it('Lets new users join.', function(done) { 
     request(
       'http://localhost:1337/join/test/secret', 
