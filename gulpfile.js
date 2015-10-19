@@ -3,6 +3,11 @@ var mocha = require('gulp-mocha');
 var nodemon = require('gulp-nodemon');
 var concat = require('gulp-concat');
 
+var angular = [
+  'client/app/**/*.module.js',
+  'client/app/**/*.js'
+];
+
 gulp.task('default', function() {
   nodemon({
     script: 'server/app.js',
@@ -12,7 +17,13 @@ gulp.task('default', function() {
 
 gulp.watch(['client/**/.js', 'client/*.html'], ['build']);
 
-gulp.task('build', ['concat'], function() {
+gulp.task('angular', function() {
+  return gulp.src(angular)
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('server/public'));
+})
+
+gulp.task('build', ['angular','concat'], function() {
   return gulp.src(['client/index.html'])
     .pipe(gulp.dest('server/public'));
 })
