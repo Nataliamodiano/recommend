@@ -3,6 +3,7 @@ angular.module('recommend')
     $routeProvider
       .when("/join", {
         templateUrl: "app/join/join.html",
-        controller: "joinController"
+        controller: "joinController",
+        controllerAs: "join"
       });
   }])
