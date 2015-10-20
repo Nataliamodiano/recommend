@@ -1,0 +1,34 @@
+{
+  "name": "recommend",
+  "version": "1.0.0",
+  "description": "Its a recommendation site for movie watchers who are indecisive.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": ";"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ronperris/recommend.git"
+  },
+  "keywords": [
+    "Example",
+    "Full-Stack",
+    "JavaScript"
+  ],
+  "author": "Ron Perris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronperris/recommend/issues"
+  },
+  "homepage": "https://github.com/ronperris/recommend#readme",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-print": "^2.0.1",
+    "request": "^2.65.0"
+  }
+}
