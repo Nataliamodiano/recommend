@@ -1,1 +1,1 @@
-angular.module('recommend', []);
+angular.module('recommend', ['ngRoute']);
