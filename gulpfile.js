@@ -46,7 +46,7 @@ gulp.task('concat', function() {
     .pipe(gulp.dest('server/public'))
 })
 
-gulp.task('test', function() {
+gulp.task('test', ['build'], function() {
   return gulp.src('server/**/*.spec.js')
     .pipe(mocha());
 })
