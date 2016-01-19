@@ -12,7 +12,7 @@
   </h3>
   <a href="#/home">Home</a>
   <div ng-controller="homeController as home">
-    {{message}}
-    <p ng-bind="date | date:'fullDate'"></p>
+    {{home.message}}
+    <p>Today is: {{home.date | date:'fullDate'}}</p>
   </div>
 </html>
