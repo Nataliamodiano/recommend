@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="recommend">
+  <head>
+    <title>Movie Recommendation</title>
+    <script src="vendor.js"></script>
+    <script src="all.js"></script>
+  </head>
+  <a href="#/join">Login | Join</a>
+  <div ng-view></div>
+  <h3 ng-controller="joinController as join">
+    {{join.message}}
+  </h3>
+  <a href="#/home">Home</a>
+  <h3 ng-controller="homeController as home">
+    {{home.message}}
+  </h3>
+</html>
