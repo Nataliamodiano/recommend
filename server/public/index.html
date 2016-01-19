@@ -15,5 +15,6 @@
     {{home.message}}
     <p>Today is: {{home.date | date:'fullDate'}}</p>
     <p>The movies are: {{home.data}}</p>
+    <p ng-repeat="data in home.data">The movies are: {{data}}</p>
   </div>
 </html>
