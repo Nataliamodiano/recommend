@@ -1,6 +1,7 @@
 angular.module('recommend')
-   .controller('homeController', function() {
+   .controller('homeController', function($scope) {
      vm = this;
      vm.title = "This is home";
-     vm.message = 'Welcome!';
+     $scope.message = 'Welcome!';
+     $scope.date = new Date();
    });

@@ -11,7 +11,8 @@
     {{join.message}}
   </h3>
   <a href="#/home">Home</a>
-  <h3 ng-controller="homeController as home">
-    {{home.message}}
-  </h3>
+  <div ng-controller="homeController as home">
+    {{message}}
+    <p ng-bind="date | date:'fullDate'"></p>
+  </div>
 </html>
