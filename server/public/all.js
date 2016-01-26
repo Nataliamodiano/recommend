@@ -11,18 +11,15 @@ angular.module('recommend')
   }])
 
 angular.module('recommend')
-  .controller('homeController', function($http) {
+  .controller('homeController', function(recommendService) {
     vm = this;
     vm.title = "This is home";
     vm.message = 'Welcome!';
     vm.date = new Date();
-     
-    $http({
-      method: 'GET',
-      url: '/data'
-    }).then(function success(response) {
+    recommendService.movies()
+      .then(function success(response) {
       vm.data = response.data.data;
-    });
+      })
   });
 angular.module('recommend')
    .controller('joinController', function() {
@@ -30,3 +27,16 @@ angular.module('recommend')
      vm.title = "Join Us.";
      vm.message = 'Thanks for joining!';
    });
+
+angular.module('recommend')
+  .factory('recommendService', function($http) {
+    var getMovies= function(){
+      return $http({
+      method: 'GET',
+      url: '/data'
+    })
+  }
+  return {
+    movies: getMovies
+    }
+  });

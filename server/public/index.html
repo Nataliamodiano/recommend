@@ -14,7 +14,7 @@
   <div ng-controller="homeController as home">
     {{home.message}}
     <p>Today is: {{home.date | date:'fullDate'}}</p>
-    <p>The movies are: {{home.data}}</p>
-    <p ng-repeat="data in home.data">The movies are: {{data}}</p>
+    <p>The movies are: {{home.movies}}</p>
+    <p ng-repeat="movie in home.movies">{{movie}}</p>
   </div>
 </html>
